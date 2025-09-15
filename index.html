@@ -9,18 +9,237 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
+    <!-- font-awesome cdn connected link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 
-<body class="max-w-[1300px] m-auto">
-    <header class="border-2 border-orange-500">
-        <div class="logo">
-            <img src="./assets/logo.png" alt="" class="w-[78px] h-[78px]">
+<body>
+    <!-- heading section start here -->
+    <header class="shadow py-3">
+        <div class="logo flex justify-center gap-3">
+            <img src="./assets/logo.png" alt="" class="w-[78px]">
             <div class="logo-content">
-                <h1 class="text-pink-500 text-xl">Deshi <span>Deals</span></h1>
-                <p class="text-sm text-gray-500">Cheap Price , Best Quality</p>
+                <h1 class="text-pink-500 text-xl text-[35px]">Deshi<span class="font-bold text-[35px]"> Deals</span>
+                </h1>
+                <p class="text-sm text-gray-500 text-[16px]">Cheap Price , Best Quality</p>
             </div>
         </div>
     </header>
+
+    <main class="bg-gray-100">
+        <!-- banner section start here -->
+        <section id="banner"
+            class=" bg-linear-to-t from-[#F6DDEA] to-[#FFFFFF]">
+            <div class="mt-[140px]">
+                <h1 class="font-bold text-[40px] flex justify-center">Purchase TK 200 or above & get</h1>
+                <span class=" flex justify-center font-bold text-[40px] text-[#e527b2]">20% off</span>
+            </div>
+            <div class="flex justify-center gap-6 mt-[39px]">
+                <p class="text-[24px]">Use Promo Code</p>
+                <button class="w-[200px] h-[50px] btn btn-secondary">SELL 200</button>
+            </div>
+            <img src="./assets/hero-bg.png" alt="" class="relative m-auto">
+        </section>
+
+        <!-- Products section start here -->
+        <section id="products-container"
+            class=" mt-12 w-11/12 mx-auto py-25 grid grid-cols-12 gap-8  p-5">
+            <section id="product-box" class="col-span-9">
+                <div class="kitchen">
+                    <h1 class="text-2xl font-bold">Kitchenware</h1>
+                    <div class="kitchen-items grid grid-cols-3 gap-5 mt-6">
+                        <div class="card bg-base-100 shadow-sm">
+                            <figure class="bg-gray-200 m-5">
+                                <img src="./assets/kitchen-1.png" alt="Shoes"
+                                    class="rounded-xl py-5" />
+                            </figure>
+                            <div class="card-body items-center text-center">
+                                <div class="flex">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                                <h2 class="card-title">K. Accessories</h2>
+                                <span class="text-gray-500">39.00 TK</span>
+                            </div>
+                        </div>
+
+                        <div class="card bg-base-100 shadow-sm ">
+                            <figure class="bg-gray-200 m-5">
+                                <img src="./assets/kitchen-2.png" alt="Shoes"
+                                    class="rounded-xl py-5" />
+                            </figure>
+                            <div class="card-body items-center text-center">
+                                <div class="flex">
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                                <h2 class="card-title">K. Accessories</h2>
+                                <span class="text-gray-500">25.00 TK</span>
+                            </div>
+                        </div>
+
+                        <div class="card bg-base-100 shadow-sm">
+                            <figure class="bg-gray-200 m-5">
+                                <img src="./assets/kitchen-3.png" alt="Shoes"
+                                    class="rounded-xl py-5" />
+                            </figure>
+                            <div class="card-body items-center text-center">
+                                <div class="flex">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                                <h2 class="card-title">Home Cooker</h2>
+                                <span class="text-gray-500">49.00 TK</span>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="product-box" class="col-span-9">
+                <div class="kitchen">
+                    <h1 class="text-2xl font-bold">Sportswear</h1>
+                    <div class="kitchen-items grid grid-cols-3 gap-5 mt-6">
+                        <div class="card bg-base-100 shadow-sm">
+                            <figure class=" bg-gray-200 m-5 ">
+                                <img src="./assets/sports-1.png" alt="Shoes"
+                                    class="rounded-xl py-5" />
+                            </figure>
+                            <div class="card-body items-center text-center">
+                                <div class="flex">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                                <h2 class="card-title">Sports Back Cap</h2>
+                                <span class="text-gray-500">49.00 TK</span>
+                            </div>
+                        </div>
+
+                        <div class="card bg-base-100 shadow-sm">
+                            <figure class="bg-gray-200 m-5">
+                                <img src="./assets/sports-2.png" alt="Shoes"
+                                    class="rounded-xl py-5" />
+                            </figure>
+                            <div class="card-body items-center text-center">
+                                <div class="flex">
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                                <h2 class="card-title">Full Jersey Set</h2>
+                                <span class="text-gray-500">69.00 TK</span>
+                            </div>
+                        </div>
+
+                        <div class="card bg-base-100 shadow-sm">
+                            <figure class="bg-gray-200 m-5">
+                                <img src="./assets/sports-3.png" alt="Shoes"
+                                    class="rounded-xl py-5" />
+                            </figure>
+                            <div class="card-body items-center text-center">
+                                <div class="flex">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                                <h2 class="card-title">Sports</h2>
+                                <span class="text-gray-500">159.00 TK</span>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="product-box" class="col-span-9">
+                <div class="kitchen">
+                    <h1 class="text-2xl font-bold">Furniture</h1>
+                    <div class="kitchen-items grid grid-cols-3 gap-5 mt-6">
+                        <div class="card bg-base-100 shadow-sm">
+                            <figure class="bg-gray-200 m-5">
+                                <img src="./assets/furniture-1.png" alt="Shoes"
+                                    class="rounded-xl py-5" />
+                            </figure>
+                            <div class="card-body items-center text-center">
+                                <div class="flex">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                                <h2 class="card-title">Single Relax Chair</h2>
+                                <span class="text-gray-500">185.00 TK</span>
+                            </div>
+                        </div>
+
+                        <div class="card bg-base-100 shadow-sm ">
+                            <figure class="bg-gray-200 m-5">
+                                <img src="./assets/furniture-2.png" alt="Shoes"
+                                    class="rounded-xl py-5" />
+                            </figure>
+                            <div class="card-body items-center text-center">
+                                <div class="flex">
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                                <h2 class="card-title">K. Accessories</h2>
+                                <span class="text-gray-500">25.00 TK</span>
+                            </div>
+                        </div>
+
+                        <div class="card bg-base-100 shadow-sm">
+                            <figure class="bg-gray-200 m-5">
+                                <img src="./assets/furniture-3.png" alt="Shoes"
+                                    class="rounded-xl py-5" />
+                            </figure>
+                            <div class="card-body items-center text-center">
+                                <div class="flex">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                                <h2 class="card-title">Home Cooker</h2>
+                                <span class="text-gray-500">49.00 TK</span>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <aside id="cart-box" class="col-span-3">
+                <div class="bg-white">
+                    <h1 class="font-bold">Have a Cupon</h1>
+                </div>
+            </aside>
+
+        </section>
+
+    </main>
 </body>
 
 </html>
