@@ -1,4 +1,5 @@
-console.log(document)
+console.log(document);
+
 //event add korar system
 
 //যেখানে ক্লিক হবে সেটাকে ধরে নিয়ে আসতে হবে।
@@ -15,9 +16,65 @@ console.log(document)
 // querySelector -> element
 // querySelectorAll -> array of element
 
-const titles = document.querySelectorAll('.card-title');
-console.log(titles);
+// const titles = document.querySelectorAll('.card-title');
+// console.log(titles);
 
-for(let title of titles){
-    title.innerHTML = "<span class='text-pink-600'>We are ph student</span>"
+// for(let title of titles){
+//     title.innerHTML = "<span class='text-pink-600'>We are ph student</span>"
+// }
+
+function getElementById(id) {
+  const element = document.getElementById(id);
+  return element;
 }
+//traverse technique
+const cartbtns = document.getElementsByClassName('cart-btn');
+console.log(cartbtns);
+
+for(let cartButton of cartbtns){
+  cartButton.addEventListener('click', function(){
+    const productImg = cartButton.parentNode.parentNode.children[0].children[0].src;
+   
+    const productTitle = cartButton.parentNode.parentNode.children[1].children[0].innerText;
+
+    const productPrice = cartButton.parentNode.parentNode.children[1].children[2].children[0].innerText;
+    
+  })
+}
+
+
+
+//traditional way
+// document.getElementById("cart-btn-1").addEventListener("click", function () {
+//   const title = getElementById("card-title-1").innerText;
+//   const price = getElementById("card-price-1").innerText;
+//   // console.log(title,price);
+
+//   //total price k dhoro
+//   const totalPrice = getElementById("total-price").innerText;
+
+//   //calculate
+//   let currentTotal = Number(price) + Number(totalPrice);
+
+//   //price update korte hbe
+//   getElementById("total-price").innerText = currentTotal.toFixed(2);
+
+//   //cart-container k dhoro
+//   const cartContainer = getElementById("cart-container");
+
+//   //Ekta div banaow
+//   const newCart = document.createElement("div");
+//   newCart.innerHTML = `
+//                   <div class="bg-gray-200 rounded-xl flex justify-between p-4">
+//                      <img src="./assets/kitchen-1.png" alt="" class="w-10">
+//                          <div class="">
+//                             <h1 class="font-bold">${title}</h1>
+//                               <h1 class="font-bold"> ${price} TK</h1>
+//                           </div>
+//                     </div>
+// `;
+
+// //cart-container e যোগ করতে হবে
+// cartContainer.append(newCart)
+
+// });
