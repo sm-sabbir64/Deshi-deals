@@ -4,13 +4,13 @@ function getElementById(id) {
   const element = document.getElementById(id);
   return element;
 }
-//traverse technique
-const cartbtns = document.getElementsByClassName("cart-btn");
-// console.log(cartbtns);
 
-for (let cartButton of cartbtns) {
-  cartButton.addEventListener("click",function(){
-    const productImg =
+//Event delegation 
+getElementById('product-box').addEventListener('click',function(e){
+  if(e.target.className.includes('cart-btn')){
+    // alert('card-clicked')
+    const cartButton = e.target;
+     const productImg =
       cartButton.parentNode.parentNode.children[0].children[0].src;
     const productTitle =
       cartButton.parentNode.parentNode.children[1].children[1].innerText;
@@ -41,9 +41,50 @@ for (let cartButton of cartbtns) {
 
     const currentQuantity = Number(quantity) + 1;
     getElementById('total-quantity').innerText = currentQuantity;
+  }
+})
 
-  });
-}
+
+//traverse technique
+// const cartbtns = document.getElementsByClassName("cart-btn");
+// console.log(cartbtns);
+
+// for (let cartButton of cartbtns) {
+//   cartButton.addEventListener("click",function(){
+//     const productImg =
+//       cartButton.parentNode.parentNode.children[0].children[0].src;
+//     const productTitle =
+//       cartButton.parentNode.parentNode.children[1].children[1].innerText;
+//     const productPrice =
+//       cartButton.parentNode.parentNode.children[1].children[2].innerText;
+//     // console.log(productPrice);
+
+//     const totalPrice = getElementById("total-price").innerText;
+//     // console.log(totalPrice);
+//     const currentTotal = parseInt(productPrice) + Number(totalPrice);
+//     getElementById("total-price").innerText = currentTotal;
+
+//     const cartContainer = getElementById("cart-container");
+
+//     const newCart = document.createElement("div");
+//     newCart.innerHTML = `
+//     <div class="bg-gray-200 rounded-xl flex justify-between p-4">
+//                      <img src="${productImg}" alt="" class="w-10">
+//                          <div class="">
+//                             <h1 class="font-semibold">${productTitle}</h1>
+//                               <h1 class="font-semibold"> ${productPrice}</h1>
+//                           </div>
+//                     </div>
+//     `;
+//     cartContainer.append(newCart);
+
+//     const quantity = getElementById('total-quantity').innerText;
+
+//     const currentQuantity = Number(quantity) + 1;
+//     getElementById('total-quantity').innerText = currentQuantity;
+
+//   });
+// }
 
 document.getElementById('btn-clear').addEventListener('click', function(){
   const cartContainer = getElementById('cart-container');
@@ -52,8 +93,6 @@ document.getElementById('btn-clear').addEventListener('click', function(){
   getElementById("total-quantity").innerText = 0;
   
 })
-
-
 
 
 //event add korar system
